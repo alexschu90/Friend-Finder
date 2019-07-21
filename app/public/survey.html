@@ -9,7 +9,7 @@
 
     <script src="https://kit.fontawesome.com/64c46d2f00.js"></script>
 
-    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -148,11 +148,35 @@
                     </select>
             </div>
             <div class="form-group"></div>
-            <a href="survey.html" button type="button" class="btn btn-primary btn-lg col-12"><i class="fas fa-check-circle"></i> Submit</button></a>
+            <a href="survey.html" button type="button" class="btn btn-primary btn-lg col-12 submit"><i class="fas fa-check-circle"></i> Submit</button></a>
         </form>
         <hr>
         <a href="#">API Friends List</a> | 
         <a href="https://github.com/alexschu90/Friend-Finder">Github Repo</a>
     </div>
+
+    <script>
+        $(".submit").on("click", function(event){
+            event.preventDefault();
+
+            var newFriend = {
+               name: $("#name").val().trim(),
+               photo: $("#photo-link").val().trim(),
+               scores: [
+                   $("#question1").val().trim(),
+                   $("#question2").val().trim(),
+                   $("#question3").val().trim(),
+                   $("#question4").val().trim(),
+                   $("#question5").val().trim(),
+                   $("#question6").val().trim(),
+                   $("#question7").val().trim(),
+                   $("#question8").val().trim(),
+                   $("#question9").val().trim(),
+                   $("#question10").val().trim()
+                ] 
+            }
+            console.log(newFriend);
+        }) 
+    </script>
 </body>
 </html>
