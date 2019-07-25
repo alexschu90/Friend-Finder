@@ -1,4 +1,4 @@
-var friends = [
+var friendsArray = [
     {
         name: "Songebob",
         photo: "https://dailydolphin.hbcsd.org/wp-content/uploads/2017/04/Spongebob-838x900.jpg",
@@ -16,3 +16,5 @@ var friends = [
         ]
     }
 ]
+
+module.exports = friendsArray;
